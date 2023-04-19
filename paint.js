@@ -37,11 +37,20 @@ function borrarPantalla(){
 
 }
 
+function pintar(){
+    pantalla.onmousemove = dibujarCirculo;
+  
+}
+ function pintarOf(){
 
+    pantalla.onmousemove = null;
+ }
 
 //fincionalidad del boton borrar
 let btnBorrar = document.querySelector("#borrar");
 btnBorrar.onclick = borrarPantalla;
 
 //funcionalidad para dibujar circulos en pantalla
-pantalla.onclick = dibujarCirculo;
+pantalla.onclick = pintar;
+pantalla.ondblclick= pintarOf;
+
