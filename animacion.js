@@ -19,12 +19,20 @@ function borrarPantalla(){
 }
 
 // x es la direccion de la pantalla para que se mueva haci la derecha
-let x = 0;
+let x = 0; 
+let adelante = true;
 function actuaizarPantalla(){
     borrarPantalla();
     diseniarcirculo(x,20,10);
-    x++;
+  if(adelante){
+      x++;
+      adelante = (x>590)? false : true;
+  }else {
+      x--;
+      adelante = (x<10)? true : false ;
+  }
+   
 }
 
 //funcion de js para hacer otras funciones con lapzo de tiempo
-setInterval(actuaizarPantalla,200);
+setInterval(actuaizarPantalla,10);
