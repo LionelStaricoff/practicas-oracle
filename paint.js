@@ -25,4 +25,14 @@ function dibujarCirculo(evento){
    // console.log(x + ", "+y);
 
 }
+
+function borrarPantalla(){
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+}
+
+let btnBorrar = document.querySelector("#borrar");
+btnBorrar.onclick = borrarPantalla;
+
 pantalla.onclick = dibujarCirculo;
