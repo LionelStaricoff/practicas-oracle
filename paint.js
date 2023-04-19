@@ -3,6 +3,8 @@ let pincel = pantalla.getContext("2d");
 
 pincel.fillStyle = "grey";
 pincel.fillRect(0,0,600,400);
+//clearRect sirve para crear otro rectanguno o borrar por zonas segun se use
+//pincel.clearRect(20, 20, 100, 50);
 
 
 //evento: se refiere al mouse cuando hace click
@@ -32,8 +34,9 @@ pincel.fillStyle= color;
 }
 
 function borrarPantalla(){
+
     pincel.fillStyle = "grey";
-    pincel.fillRect(0,0,600,400);
+   pincel.fillRect(0,0,600,400);
 
 }
 
