@@ -7,3 +7,14 @@
 body{
     background-color: blue;
 }
+#borrar , #color{
+    height: 3em;
+    font-size: 100%;
+}
+
+nav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}

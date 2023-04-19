@@ -18,7 +18,12 @@ function dibujarCirculo(evento){
     let x = evento.pageX - pantalla.offsetLeft;
     let y = evento.pageY - pantalla.offsetTop;
 
-    pincel.fillStyle = "blue";
+//funcionalidad para cambiar de color
+let color = document.querySelector("#color").value;
+
+pincel.fillStyle= color;
+
+  //  pincel.fillStyle = "blue";
     pincel.beginPath();
     pincel.arc(x,y,10,0,2*Math.PI);
     pincel.fill();
@@ -32,7 +37,11 @@ function borrarPantalla(){
 
 }
 
+
+
+//fincionalidad del boton borrar
 let btnBorrar = document.querySelector("#borrar");
 btnBorrar.onclick = borrarPantalla;
 
+//funcionalidad para dibujar circulos en pantalla
 pantalla.onclick = dibujarCirculo;
